@@ -1,0 +1,10 @@
+[Desktop Entry]
+_Name=App
+_Comment=GNOME application template
+_Keywords=app;gnome;template;
+Exec=app
+Icon=app
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Utility;

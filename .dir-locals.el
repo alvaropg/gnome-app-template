@@ -1,0 +1,18 @@
+((c-mode
+  (flycheck-clang-include-path "./"
+                               "../"
+                               "../src/"
+                               "/usr/include/gtk-3.0"
+                               "/usr/include/at-spi2-atk/2.0"
+                               "/usr/include/gio-unix-2.0/"
+                               "/usr/include/cairo"
+                               "/usr/include/pango-1.0"
+                               "/usr/include/harfbuzz"
+                               "/usr/include/atk-1.0"
+                               "/usr/include/pixman-1"
+                               "/usr/include/freetype2"
+                               "/usr/include/libdrm"
+                               "/usr/include/libpng16"
+                               "/usr/include/gdk-pixbuf-2.0"
+                               "/usr/include/libpng16"
+                               "/usr/include/glib-2.0")))
