@@ -77,5 +77,7 @@ app_application_window_new (GtkApplication *application)
                                          "application", application,
                                          "title", _("App"),
                                          "window-position", GTK_WIN_POS_CENTER,
+                                         "default-width", 320,
+                                         "default-height", 240,
                                          NULL));
 }
