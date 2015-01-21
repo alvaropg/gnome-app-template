@@ -55,6 +55,7 @@ AC_CONFIG_FILES([
 Makefile
 data/Makefile
 data/app.desktop.in
+data/icons/Makefile
 src/Makefile
 po/Makefile.in
 ])

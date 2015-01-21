@@ -149,6 +149,7 @@ app_application_about_activated (__attribute__ ((unused)) GSimpleAction *action,
         gtk_show_about_dialog (GTK_WINDOW (APP_APPLICATION (app)->priv->window),
                                "program-name", "App",
                                "title", _("App"),
+                               "logo-icon-name", PACKAGE_NAME,
                                NULL);
 }
 
