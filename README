@@ -1,7 +1,11 @@
-App
-===
+GNOME APPLICATION TEMPLATE
+==========================
 
-Here your must describe your application
+In the meantime that GNOME Builder[1] can be used in our day by day,
+here you have a template code to start your GNOME 3 application,
+trying to save you time.
+
+1. https://wiki.gnome.org/Apps/Builder
 
 Required software
 =================
