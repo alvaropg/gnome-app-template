@@ -143,7 +143,10 @@ app_application_about_activated (__attribute__ ((unused)) GSimpleAction *action,
                                  __attribute__ ((unused)) GVariant      *parameter,
                                  gpointer       user_data)
 {
-        gtk_show_about_dialog (NULL,
+        GApplication *app;
+
+        app = g_application_get_default ();
+        gtk_show_about_dialog (GTK_WINDOW (APP_APPLICATION (app)->priv->window),
                                "program-name", "App",
                                "title", _("App"),
                                NULL);
