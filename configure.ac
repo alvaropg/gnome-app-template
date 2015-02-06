@@ -25,6 +25,7 @@ AC_SUBST(LIBM)
 GLIB_GSETTINGS
 
 GTK_MIN_VERSION=3.12
+GLIB_MIN_VERSION=2.32
 
 GNOME_COMPILE_WARNINGS([maximum])
 GNOME_DEBUG_CHECK
@@ -40,7 +41,10 @@ AM_GLIB_GNU_GETTEXT
 
 LT_INIT
 
-PKG_CHECK_MODULES(APP_MODULES, [gtk+-3.0 >= $GTK_MIN_VERSION])
+PKG_CHECK_MODULES(APP_MODULES, [
+                               gtk+-3.0 >= $GTK_MIN_VERSION
+                               glib-2.0 >= $GLIB_MIN_VERSION
+                               gio-2.0 >= $GLIB_MIN_VERSION ])
 
 AC_ARG_VAR([DESKTOP_FILE_VALIDATE], [the desktop-file-validate program])
 AC_PATH_PROG([DESKTOP_FILE_VALIDATE], [desktop-file-validate], [])

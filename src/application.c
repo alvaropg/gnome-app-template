@@ -44,7 +44,6 @@ static void app_application_quit_activated (GSimpleAction *action,
 struct _AppApplicationPrivate {
         GtkWidget *window;
         guint32 activation_timestamp;
-        GResource *resource;
 };
 
 G_DEFINE_TYPE_WITH_CODE (AppApplication, app_application, GTK_TYPE_APPLICATION, G_ADD_PRIVATE (AppApplication));
@@ -72,18 +71,10 @@ app_application_class_init (AppApplicationClass *klass)
 static void
 app_application_init (AppApplication *self)
 {
-        GError *error = NULL;
-
         self->priv = app_application_get_instance_private(self);
 
         self->priv->window = NULL;
         self->priv->activation_timestamp = GDK_CURRENT_TIME;
-        self->priv->resource = g_resource_load (app_utils_get_resource_filename (), &error);
-        if (error == NULL) {
-                g_resources_register (self->priv->resource);
-        } else {
-                g_error (_("Error loading resources file: %s"), error->message);
-        }
 }
 
 static void
@@ -98,12 +89,6 @@ static void
 app_application_dispose (GObject *object)
 {
         AppApplication *self = APP_APPLICATION (object);
-
-        if (self->priv->resource) {
-                g_resources_unregister (self->priv->resource);
-                g_resource_unref (self->priv->resource);
-                self->priv->resource = NULL;
-        }
 
         G_OBJECT_CLASS (app_application_parent_class)->dispose (object);
 }
