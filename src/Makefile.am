@@ -7,8 +7,6 @@ app_SOURCES = \
 	application-window.c \
 	application-window.h \
 	main.c \
-	utils.c \
-	utils.h \
 	$(NULL)
 
 app_CPPFLAGS = \
