@@ -26,7 +26,6 @@
 
 #include "application.h"
 #include "application-window.h"
-#include "utils.h"
 
 static void app_application_constructed (GObject *object);
 static void app_application_dispose     (GObject *object);
